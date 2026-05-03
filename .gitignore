@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.local
+.claude/
+followup/
+whatsapp-sender/
+send_emails.py
+campaign.txt
+emails.csv
+leon.png
