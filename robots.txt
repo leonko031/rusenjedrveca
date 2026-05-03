@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://vektora.hr/sitemap.xml
+Sitemap: https://leonilisin.com/sitemap.xml
 
 # Block common spam bots
 User-agent: AhrefsBot
@@ -13,3 +13,6 @@ Disallow: /
 
 User-agent: DotBot
 Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
