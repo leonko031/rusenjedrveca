@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://leonilisin.com/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://leonko031.github.io/rusenjedrveca/</loc>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://leonilisin.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://leonilisin.com/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://leonko031.github.io/rusenjedrveca/"/>
+    <xhtml:link rel="alternate" hreflang="hr-HR" href="https://leonko031.github.io/rusenjedrveca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leonko031.github.io/rusenjedrveca/"/>
+    <image:image>
+      <image:loc>https://leonko031.github.io/rusenjedrveca/gallery/hero.jpg</image:loc>
+      <image:caption>Profesionalno rušenje drveća — penjač s motornom pilom</image:caption>
+      <image:title>Rušenje Drveća — Hero</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://leonko031.github.io/rusenjedrveca/gallery/1.jpg</image:loc>
+      <image:caption>Spuštanje srušenog drveta uz električne vodove</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leonko031.github.io/rusenjedrveca/gallery/2.jpg</image:loc>
+      <image:caption>Penjač na ogoljenom deblu između kuća</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leonko031.github.io/rusenjedrveca/gallery/3.jpg</image:loc>
+      <image:caption>Akcijska slika rušenja s motornom pilom</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leonko031.github.io/rusenjedrveca/gallery/4.jpg</image:loc>
+      <image:caption>Visoko stablo uz crkvu</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leonko031.github.io/rusenjedrveca/gallery/5.jpg</image:loc>
+      <image:caption>Skraćeno stablo ispred zgrade</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leonko031.github.io/rusenjedrveca/gallery/6.jpg</image:loc>
+      <image:caption>Detalj reza grane</image:caption>
+    </image:image>
   </url>
 
 </urlset>
