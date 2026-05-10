@@ -262,6 +262,98 @@
             }
           }
         ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://leonko031.github.io/rusenjedrveca/#howto",
+        "name": "Kako rušimo drvo — od poziva do gotovog posla",
+        "description": "Jednostavan i transparentan proces rušenja drveća u 4 koraka.",
+        "totalTime": "PT24H",
+        "supply": [
+          { "@type": "HowToSupply", "name": "Profesionalna proturezna oprema" },
+          { "@type": "HowToSupply", "name": "Penjačka oprema (užad, pojasevi, karabineri)" }
+        ],
+        "tool": [
+          { "@type": "HowToTool", "name": "Motorna pila" },
+          { "@type": "HowToTool", "name": "Korpa-dizalica" },
+          { "@type": "HowToTool", "name": "Kran" },
+          { "@type": "HowToTool", "name": "4×4 vozilo" },
+          { "@type": "HowToTool", "name": "Gusjeničar" }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Kontakt",
+            "text": "Nazovite na 099 213 1102 ili pošaljite upit putem forme. Odgovaramo u najkraćem roku.",
+            "url": "https://leonko031.github.io/rusenjedrveca/#kontakt"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Procjena",
+            "text": "Dolazimo na teren, procjenjujemo posao i dajemo besplatnu, transparentnu ponudu — bez obveze."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Izvedba",
+            "text": "Sigurno i precizno izvodimo posao s profesionalnom opremom (penjač / korpa-dizalica / kran) i certificiranim timom."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Čišćenje i odvoz",
+            "text": "Uklanjamo sav drveni otpad, građu, granje i lišće. Teren ostavljamo čistim — kao da nas nije ni bilo."
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://leonko031.github.io/rusenjedrveca/#service-rusenje",
+        "name": "Rušenje drveća",
+        "alternateName": "Rušenje stabala",
+        "description": "Profesionalno rušenje drveća svih vrsta i visina u cijeloj Hrvatskoj. Koristimo penjačku tehniku, korpa-dizalicu ili kran — i u najskučenijim prostorima.",
+        "provider": { "@id": "https://leonko031.github.io/rusenjedrveca/#business" },
+        "serviceType": "Tree Removal",
+        "areaServed": [
+          { "@type": "Country", "name": "Hrvatska" }
+        ],
+        "category": "Tree Care",
+        "url": "https://leonko031.github.io/rusenjedrveca/#usluge"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://leonko031.github.io/rusenjedrveca/#service-skracivanje",
+        "name": "Skraćivanje vrhova drveća",
+        "description": "Skraćivanje vrhova radi sprječavanja samoizvaljivanja stabala u nevremenu. Profesionalno i sigurno održavanje krošnje.",
+        "provider": { "@id": "https://leonko031.github.io/rusenjedrveca/#business" },
+        "serviceType": "Tree Topping",
+        "areaServed": { "@type": "Country", "name": "Hrvatska" },
+        "category": "Tree Care",
+        "url": "https://leonko031.github.io/rusenjedrveca/#usluge"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://leonko031.github.io/rusenjedrveca/#service-panj",
+        "name": "Uklanjanje panjeva",
+        "description": "Brzo i efikasno uklanjanje panjeva nakon rušenja drveća. Teren ostavljamo potpuno čistim.",
+        "provider": { "@id": "https://leonko031.github.io/rusenjedrveca/#business" },
+        "serviceType": "Stump Removal",
+        "areaServed": { "@type": "Country", "name": "Hrvatska" },
+        "category": "Tree Care",
+        "url": "https://leonko031.github.io/rusenjedrveca/#usluge"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://leonko031.github.io/rusenjedrveca/#service-odvoz",
+        "name": "Odvoz drvenog materijala",
+        "description": "Odvoz drvenog materijala, građe, granja i lišća s nepristupačnih terena pomoću 4×4 vozila i gusjeničara. Ekološko zbrinjavanje.",
+        "provider": { "@id": "https://leonko031.github.io/rusenjedrveca/#business" },
+        "serviceType": "Wood Waste Disposal",
+        "areaServed": { "@type": "Country", "name": "Hrvatska" },
+        "category": "Tree Care",
+        "url": "https://leonko031.github.io/rusenjedrveca/#usluge"
       }
     ]
   }
@@ -1011,6 +1103,51 @@
     .lightbox-prev:hover, .lightbox-next:hover { transform: translateY(-50%) scale(1.1); }
 
     /* ============================================
+       AREAS (Local SEO)
+       ============================================ */
+    .areas {
+      padding: 60px 0;
+      background: #fff;
+      position: relative;
+    }
+    .areas-grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .areas-grid li {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 16px;
+      background: var(--bg-soft);
+      border: 1px solid rgba(0,0,0,0.04);
+      border-radius: 10px;
+      font-size: 14.5px; font-weight: 700;
+      color: var(--ink);
+      transition: background .25s var(--t), border-color .25s var(--t), transform .25s var(--t), color .25s var(--t);
+    }
+    .areas-grid li:hover {
+      background: var(--green-soft);
+      border-color: rgba(74,157,58,0.3);
+      transform: translateY(-2px);
+      color: var(--green-dark);
+    }
+    .areas-grid li svg {
+      width: 16px; height: 16px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+    .areas-grid li.areas-all {
+      grid-column: span 2;
+      background: var(--green-soft);
+      border-color: rgba(74,157,58,0.25);
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    /* ============================================
        CONTACT
        ============================================ */
     .contact {
@@ -1557,7 +1694,10 @@
         max-width: none; margin: 0;
       }
       .about-grid, .cta-grid, .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-      .services, .about, .process, .gallery, .faq, .contact { padding: 50px 0; }
+      .services, .about, .process, .gallery, .faq, .areas, .contact { padding: 50px 0; }
+      .areas-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .areas-grid li { padding: 12px 14px; font-size: 13.5px; }
+      .areas-grid li.areas-all { grid-column: span 2; }
       .stats { padding: 40px 0; }
       .section-head { margin-bottom: 28px; }
       .process-cta { margin-top: 28px; }
@@ -2077,6 +2217,31 @@
   </section>
 
   <!-- ========== CONTACT ========== -->
+  <!-- ========== SERVICE AREAS (LOCAL SEO) ========== -->
+  <section class="areas" aria-labelledby="areas-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Cijela Hrvatska</span>
+        <h2 id="areas-title">Područja Rada</h2>
+        <p>Dolazimo na bilo koju lokaciju u Hrvatskoj — uključujući nepristupačne i strme terene zahvaljujući 4×4 vozilima i gusjeničaru.</p>
+      </div>
+      <ul class="areas-grid reveal">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Zagreb</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Split</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rijeka</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Osijek</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Zadar</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Pula</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Karlovac</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Varaždin</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Slavonski Brod</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Šibenik</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Dubrovnik</li>
+        <li class="areas-all"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L19 8v8l-7 3.5L5 16V8l7-3.82z"/></svg>i sva ostala mjesta</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="contact" id="kontakt">
     <div class="container">
       <div class="contact-grid">
