@@ -1051,6 +1051,7 @@
     }
     .form-msg.show { display: flex; }
     .form-msg.success { background: var(--green-soft); color: #2d6020; border: 1px solid rgba(74,157,58,0.25); }
+    .form-msg.error { background: #fdecec; color: #a02020; border: 1px solid rgba(210,62,62,0.25); }
 
     /* ============================================
        FAQ
@@ -2138,7 +2139,13 @@
       form.querySelector(`[name="${n}"]`).addEventListener('input', () => setError(n, ''));
     });
 
-    form.addEventListener('submit', (e) => {
+    function showFormMsg(type, text) {
+      formMsg.className = 'form-msg ' + type + ' show';
+      const span = formMsg.querySelector('span');
+      if (span) span.textContent = text;
+    }
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let valid = true;
       const data = new FormData(form);
@@ -2158,24 +2165,37 @@
       submitBtn.classList.add('loading');
       submitBtn.disabled = true;
       submitLabel.textContent = 'Šaljem...';
+      formMsg.classList.remove('show');
 
-      setTimeout(() => {
-        const subject = encodeURIComponent('Upit s web stranice — Rušenje Drveća');
-        const body = encodeURIComponent(
-          'Ime: ' + name + '\n' +
-          'Telefon: ' + phone + '\n' +
-          'E-mail: ' + email + '\n\n' +
-          'Poruka:\n' + message
-        );
-        window.location.href = 'mailto:rusenjedrveca99@gmail.com?subject=' + subject + '&body=' + body;
-
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/rusenjedrveca99@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            'Ime i prezime': name,
+            'Telefon': phone,
+            'E-mail': email || '(nije ostavljen)',
+            'Poruka': message,
+            _subject: 'Novi upit s web stranice — Rušenje Drveća',
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && (json.success === 'true' || json.success === true)) {
+          showFormMsg('success', 'Hvala! Upit je poslan. Javit ćemo se u najkraćem roku.');
+          form.reset();
+        } else {
+          showFormMsg('error', 'Slanje nije uspjelo. Nazovite nas na 099 213 1102.');
+        }
+      } catch (err) {
+        showFormMsg('error', 'Greška na mreži. Nazovite nas na 099 213 1102.');
+      } finally {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
         submitLabel.textContent = 'Pošalji Upit';
-        formMsg.classList.add('show');
-        setTimeout(() => formMsg.classList.remove('show'), 7000);
-        form.reset();
-      }, 700);
+        setTimeout(() => formMsg.classList.remove('show'), 9000);
+      }
     });
 
     /* ========== HERO PARALLAX ========== */
